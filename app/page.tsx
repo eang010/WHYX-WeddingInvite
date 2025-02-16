@@ -44,7 +44,7 @@ export default function Home() {
             <div className="envelope-body"></div>
             <div className={`envelope-content ${isEnvelopeOpen ? "visible" : ""}`}>
               <h1 className="text-3xl md:text-5xl lg:text-7xl font-semibold mb-4 md:mb-6 lg:mb-8">You're invited!</h1>
-              <p className="text-lg md:text-xl mb-6 md:mb-8 lg:mb-10">by Weihao & Yuxin</p>
+              <p className="text-lg md:text-xl mb-6 md:mb-8 lg:mb-10">by Weihow & Yuxin</p>
               <Link
                 href="/invitation"
                 className="inline-flex items-center bg-blue-300 text-white rounded-full hover:bg-blue-400 transition-colors duration-200 animate-pulse"

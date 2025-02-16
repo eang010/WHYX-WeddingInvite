@@ -27,7 +27,7 @@ export default function Invitation() {
               <span className="block">Save the Date</span>
             </h1>
             <h2 className="text-3xl mb-8 text-text/80 font-normal">
-              You are cordially invited to the wedding of Weihao & Yuxin
+              You are cordially invited to the wedding of Weihow & Yuxin
             </h2>
             <CountdownTimer targetDate={eventDate} />
           </div>
