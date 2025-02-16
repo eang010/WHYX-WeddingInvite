@@ -130,8 +130,8 @@ main {
 .envelope-flap.top {
   top: 0;
   left: 0;
-  border-width: 0 300px 225px 300px;
-  border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
+  border-width: 300px 300px 0 300px;
+  border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
   transform-origin: top;
   z-index: 4;
 }
@@ -157,8 +157,8 @@ main {
 .envelope-flap.bottom {
   bottom: 0;
   left: 0;
-  border-width: 225px 300px 0 300px;
-  border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+  border-width: 0 300px 300px 300px;
+  border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
   transform-origin: bottom;
   z-index: 2;
 }
