@@ -55,6 +55,13 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        rotate: {
+          '0%': { transform: 'rotate(-90deg)' },
+          '50%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-90deg)' },
+        }
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

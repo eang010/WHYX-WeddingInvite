@@ -1,11 +1,28 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { MailOpenIcon as Envelope } from "lucide-react"
+import RotatePhoneIndicator from "@/components/RotatePhoneIndicator"
 
 export default function Home() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false)
+  const [showRotateIndicator, setShowRotateIndicator] = useState(false)
+
+  useEffect(() => {
+    const checkOrientation = () => {
+      if (isEnvelopeOpen && window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
+        setShowRotateIndicator(true)
+      } else {
+        setShowRotateIndicator(false)
+      }
+    }
+
+    checkOrientation()
+    window.addEventListener('resize', checkOrientation)
+    
+    return () => window.removeEventListener('resize', checkOrientation)
+  }, [isEnvelopeOpen])
 
   const handleEnvelopeClick = () => {
     setIsEnvelopeOpen(!isEnvelopeOpen)
@@ -13,6 +30,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-main-bg">
+      {showRotateIndicator && <RotatePhoneIndicator />}
       <div className="text-center relative w-11/12 md:w-3/4 lg:w-2/3 aspect-[3/2] flex items-center justify-center">
         <div 
           className={`envelope-container relative w-full h-full before:content-[''] before:absolute before:inset-0 before:bg-[url('/background/envelopecover.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-90 before:z-20 ${isEnvelopeOpen ? 'before:opacity-0 before:invisible' : 'before:visible'}`}
