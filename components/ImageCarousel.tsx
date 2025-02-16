@@ -25,7 +25,7 @@ export default function ImageCarousel() {
 
   return (
     <div className="bg-white bg-opacity-50 p-5 rounded-lg shadow-lg h-full flex flex-col">
-      <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
+      <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
       <div className="flex-grow">
         <Slider {...settings}>
           {images.map((src, index) => (
