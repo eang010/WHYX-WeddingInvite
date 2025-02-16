@@ -130,7 +130,7 @@ main {
 .envelope-flap.top {
   top: 0;
   left: 0;
-  border-width: 300px 300px 0 300px;
+  border-width: 200px 200px 0 200px;
   border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
   transform-origin: top;
   z-index: 4;
@@ -157,7 +157,7 @@ main {
 .envelope-flap.bottom {
   bottom: 0;
   left: 0;
-  border-width: 0 300px 300px 300px;
+  border-width: 0 200px 200px 200px;
   border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
   transform-origin: bottom;
   z-index: 2;
@@ -212,5 +212,25 @@ main {
 .envelope-content.visible {
   opacity: 1;
   visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .envelope-flap.top {
+    border-width: 250px 250px 0 250px;
+  }
+  
+  .envelope-flap.bottom {
+    border-width: 0 250px 250px 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .envelope-flap.top {
+    border-width: 300px 300px 0 300px;
+  }
+  
+  .envelope-flap.bottom {
+    border-width: 0 300px 300px 300px;
+  }
 }
 
