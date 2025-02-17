@@ -47,7 +47,7 @@ export default function Home() {
               <p className="text-lg md:text-xl mb-6 md:mb-8 lg:mb-10">by Weihow & Yuxin</p>
               <Link
                 href="/invitation"
-                className="inline-flex items-center bg-blue-300 text-white rounded-full hover:bg-blue-400 transition-colors duration-200 animate-pulse"
+                className="inline-flex items-center bg-blue-300 text-white rounded-full hover:bg-blue-400 transition-colors duration-1000 animate-pulse"
               >
                 <button className="p-2 md:p-3 lg:p-4">
                   <Envelope className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
