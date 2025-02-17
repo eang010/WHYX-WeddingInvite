@@ -40,7 +40,7 @@ export default function EventDetails({ eventDate }: { eventDate: Date }) {
             <span>Singapore Marriott Tang Plaza Hotel</span>
           </div>
           <a
-            href="https://goo.gl/maps/X7P5JvDQAKJ2"
+            href="https://maps.app.goo.gl/fiB8kTmW3HatZhp89"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-flex items-center justify-center px-3 py-1 bg-blue-300 text-white text-sm rounded-md hover:bg-blue-400 transition-colors duration-200 self-start ml-8"
