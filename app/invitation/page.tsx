@@ -48,9 +48,18 @@ export default function Invitation() {
           {isExpanded && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
+              animate={{
+                height: "auto",
+                opacity: 1,
+                transition: { duration: 0.3 }
+              }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              onAnimationComplete={() => {
+                window.scrollTo({
+                  top: document.documentElement.scrollHeight,
+                  behavior: 'smooth'
+                })
+              }}
               className="overflow-auto flex-grow"
             >
               <div className="container mx-auto px-4 py-8 grid gap-8 min-h-full">
